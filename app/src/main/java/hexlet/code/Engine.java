@@ -19,6 +19,8 @@ public class Engine {
                 case "4":
                     correctAnswer = GCD.gameGCD();
                     break;
+                case "5":
+                    correctAnswer = Progression.gameProgression();
             }
             Scanner scanner = new Scanner(System.in);
             System.out.print("Your answer: ");
