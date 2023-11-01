@@ -5,7 +5,6 @@ import java.util.Random;
 public class GCD {
 
     public static String gameGCD() {
-        //System.out.println("Find the greatest common divisor of given numbers.");
         Random randomNumber = new Random();
         int randomNumberOne = randomNumber.nextInt(50);
         int randomNumberTwo = randomNumber.nextInt(50);

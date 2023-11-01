@@ -5,7 +5,7 @@ import hexlet.code.games.*;
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
-        System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n3 - Calculator\n4 - GCD\n5 - Progression\n0 - Exit");
+        System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n3 - Calculator\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
         int gameNumber = scanner.nextInt();
@@ -34,6 +34,11 @@ public class App {
                 Cli.getUserName();
                 System.out.println("What number is missing in the progression?");
                 Engine.startGame("5");
+                break;
+            case 6:
+                Cli.getUserName();
+                System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                Engine.startGame("6");
                 break;
         }
     }

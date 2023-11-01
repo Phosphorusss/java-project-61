@@ -6,13 +6,12 @@ public class Progression {
 
     public static String gameProgression() {
         Random randomNumber = new Random();
-        int firstNumberProgression = randomNumber.nextInt(50);
-        System.out.println(firstNumberProgression);
+        int firstNumberProgression = randomNumber.nextInt(100 - 1 + 1) + 1;
 
-        int difference = randomNumber.nextInt(10);
-        System.out.println(difference);
+        int difference = randomNumber.nextInt(10 - 1 + 1) + 1;
+        //System.out.println(difference);
 
-        int unknownNumber = randomNumber.nextInt(9);
+        int unknownNumber = randomNumber.nextInt(10 - 1 + 1) + 1;
         int correctAnswer = 0;
 
         var progression = new StringBuilder("");

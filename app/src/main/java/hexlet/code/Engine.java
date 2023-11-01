@@ -21,6 +21,9 @@ public class Engine {
                     break;
                 case "5":
                     correctAnswer = Progression.gameProgression();
+                    break;
+                case "6":
+                    correctAnswer = Prime.gamePrime();
             }
             Scanner scanner = new Scanner(System.in);
             System.out.print("Your answer: ");

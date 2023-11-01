@@ -13,8 +13,8 @@ public class Calculator {
         char operatorRandom = operator.charAt(random.nextInt(operator.length()));
 
         Random randomNumber = new Random();
-        int randomNumberOne = randomNumber.nextInt(50);
-        int randomNumberTwo = randomNumber.nextInt(50);
+        int randomNumberOne = randomNumber.nextInt(100 - 40 + 1) + 40;
+        int randomNumberTwo = randomNumber.nextInt(100);
         String correctAnswer = "";
 
         switch (operatorRandom) {
