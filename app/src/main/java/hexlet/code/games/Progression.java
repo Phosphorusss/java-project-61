@@ -9,7 +9,7 @@ public class Progression {
         int firstNumberProgression = randomNumber.nextInt(100 - 1 + 1) + 1;
 
         int difference = randomNumber.nextInt(10 - 1 + 1) + 1;
-        //System.out.println(difference);
+        //System.out.println("Шаг(только для теста) " + difference);
 
         int unknownNumber = randomNumber.nextInt(10 - 1 + 1) + 1;
         int correctAnswer = 0;
