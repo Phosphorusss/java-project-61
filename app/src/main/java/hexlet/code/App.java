@@ -22,12 +22,12 @@ public class App {
                 break;
             case 3:
                 Cli.getUserName();
-                System.out.println("Find the greatest common divisor of given numbers.");
+                System.out.println("What is the result of the expression?");
                 Engine.startGame("3");
                 break;
             case 4:
                 Cli.getUserName();
-                System.out.println("What is the result of the expression?");
+                System.out.println("Find the greatest common divisor of given numbers.");
                 Engine.startGame("4");
                 break;
             case 5:
