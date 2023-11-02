@@ -7,12 +7,10 @@ public class Progression {
     public static String gameProgression() {
         Random randomNumber = new Random();
         int firstNumberProgression = randomNumber.nextInt(50);
-
         int difference = (int) (Math.random() * 9) + 1;
-
         int unknownNumber = (int) (Math.random() * 9) + 1;
-        int correctAnswer = 0;
 
+        int correctAnswer = 0;
         var progression = new StringBuilder("");
         progression.append(firstNumberProgression).append(" ");
         for (var i = 0; i < 9; i ++) {
@@ -26,7 +24,7 @@ public class Progression {
             progression.append(firstNumberProgression).append(" ");
 
         }
-        System.out.println(progression.toString());
+        System.out.println("Question: " + progression.toString());
     return String.valueOf(correctAnswer);
     }
 }
