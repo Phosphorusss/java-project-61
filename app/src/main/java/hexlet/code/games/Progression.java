@@ -6,17 +6,16 @@ public class Progression {
 
     public static String gameProgression() {
         Random randomNumber = new Random();
-        int firstNumberProgression = randomNumber.nextInt(100 - 1 + 1) + 1;
+        int firstNumberProgression = randomNumber.nextInt(50);
 
-        int difference = randomNumber.nextInt(10 - 1 + 1) + 1;
-        //System.out.println("Шаг(только для теста) " + difference);
+        int difference = (int) (Math.random() * 9) + 1;
 
-        int unknownNumber = randomNumber.nextInt(10 - 1 + 1) + 1;
+        int unknownNumber = (int) (Math.random() * 9) + 1;
         int correctAnswer = 0;
 
         var progression = new StringBuilder("");
         progression.append(firstNumberProgression).append(" ");
-        for (var i = 0; i < 10; i ++) {
+        for (var i = 0; i < 9; i ++) {
             if (i == unknownNumber) {
                 firstNumberProgression = firstNumberProgression + difference;
                 correctAnswer = firstNumberProgression;

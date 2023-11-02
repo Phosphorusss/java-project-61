@@ -9,7 +9,7 @@ Calc
 GCD
 [![asciicast](https://asciinema.org/a/aWnWv86r0WjGOZI9v4RLE51yj.svg)](https://asciinema.org/a/aWnWv86r0WjGOZI9v4RLE51yj)
 Progression
-[![asciicast](https://asciinema.org/a/IbpvlDx4eP62Q81dkrIYIqmuh.svg)](https://asciinema.org/a/IbpvlDx4eP62Q81dkrIYIqmuh)
+[![asciicast](https://asciinema.org/a/Xys38h2aKukIvXHTvp4SAcCO8.svg)](https://asciinema.org/a/Xys38h2aKukIvXHTvp4SAcCO8)
 Prime
 [![asciicast](https://asciinema.org/a/XujoyDPIOFQQ5iEyYsEgrSV2Y.svg)](https://asciinema.org/a/XujoyDPIOFQQ5iEyYsEgrSV2Y)
 
