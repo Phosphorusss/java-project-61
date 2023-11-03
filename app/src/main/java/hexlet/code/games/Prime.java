@@ -10,10 +10,11 @@ public class Prime {
 
         System.out.println("Question: " + number);
         String correctAnswer = "";
+
+        if (number == 1) {
+            correctAnswer = "no";
+        }
         for (var i = 2; i < number; i++) {
-            if (number == 1) {
-                correctAnswer = "no";
-            }
 
             if (number % i == 0) {
                 correctAnswer = "no";
