@@ -1,16 +1,23 @@
 package hexlet.code;
 
+import hexlet.code.games.Calculator;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Even;
+
+import hexlet.code.games.GCD;
+
+import hexlet.code.games.Progression;
+
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
 public class Engine {
+    static  final int NUMBER_OF_ROUNDS = 3;
     public static void startGame(String gameNumber, String userName) {
 
-        int numberOfRounds = 3;
         int quitTheGame = 0;
-        while (quitTheGame < 3) {
+        while (quitTheGame < NUMBER_OF_ROUNDS) {
             String correctAnswer = "";
             switch (gameNumber) {
                 case "2":
@@ -40,12 +47,12 @@ public class Engine {
                 System.out.println("Correct!");
                 quitTheGame += 1;
             } else {
-                System.out.println("'" + userResponse + "' is wrong answer ;(. Correct answer was '" +
-                        correctAnswer + "'.\nLet's try again, " + userName + "!");
+                System.out.println("'" + userResponse + "' is wrong answer ;(. Correct answer was '"
+                        + correctAnswer + "'.\nLet's try again, " + userName + "!");
                 break;
             }
 
-            if (quitTheGame == numberOfRounds) {
+            if (quitTheGame == NUMBER_OF_ROUNDS) {
                 System.out.println("Congratulations, " + userName + "!");
                 break;
             }

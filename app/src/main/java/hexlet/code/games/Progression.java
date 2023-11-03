@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class Progression {
 
+    static final int UPPER_LIMIT = 50;
+    static final int MINIMUM = 1;
     public static String gameProgression() {
-        int upperlimit = 50;
-        int minimum = 1;
         Random randomNumber = new Random();
-        int firstNumberProgression = randomNumber.nextInt(upperlimit - minimum + 1) + minimum;
+        int firstNumberProgression = randomNumber.nextInt(UPPER_LIMIT - MINIMUM + 1) + MINIMUM;
 
         int startingRangeValue = 1;
         int endValueOfRange = 9;

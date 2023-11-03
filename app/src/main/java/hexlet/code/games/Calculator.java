@@ -3,16 +3,16 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Calculator {
+    static final int UPPER_LIMIT = 100;
+    static final int MINIMUM = 40;
     public static String gameCalculator() {
         String operator = "-+*";
         Random random = new Random();
         char operatorRandom = operator.charAt(random.nextInt(operator.length()));
 
-        int upperlimit = 100;
-        int minimum = 40;
         Random randomNumber = new Random();
-        int randomNumberOne = randomNumber.nextInt(upperlimit - minimum + 1) + minimum;
-        int randomNumberTwo = randomNumber.nextInt(upperlimit);
+        int randomNumberOne = randomNumber.nextInt(UPPER_LIMIT - MINIMUM + 1) + MINIMUM;
+        int randomNumberTwo = randomNumber.nextInt(UPPER_LIMIT);
         String correctAnswer = "";
 
         switch (operatorRandom) {

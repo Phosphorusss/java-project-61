@@ -3,10 +3,10 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Prime {
+    static final int UPPER_LIMIT = 100;
     public static String gamePrime() {
-        int upperlimit = 100;
         Random random = new Random();
-        int number = random.nextInt(upperlimit);
+        int number = random.nextInt(UPPER_LIMIT);
 
         System.out.println("Question: " + number);
         String correctAnswer = "";
