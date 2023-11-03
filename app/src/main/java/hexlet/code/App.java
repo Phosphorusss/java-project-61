@@ -1,44 +1,41 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
-
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
-        System.out.println("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n3 - Calculator\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
+        System.out.println("Please enter the game number and press Enter.\n1 - Greet" +
+                "\n2 - Even\n3 - Calculator\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
         int gameNumber = scanner.nextInt();
+        String userName = Cli.getUserName();;
 
-        //scanner.close();
-        switch (gameNumber){
+        switch (gameNumber) {
             case 1:
                 Cli.getUserName();
                 break;
             case 2:
-                Cli.getUserName();
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-                Engine.startGame("2");
+                Engine.startGame("2", userName);
                 break;
             case 3:
-                Cli.getUserName();
                 System.out.println("What is the result of the expression?");
-                Engine.startGame("3");
+                Engine.startGame("3", userName);
                 break;
             case 4:
-                Cli.getUserName();
                 System.out.println("Find the greatest common divisor of given numbers.");
-                Engine.startGame("4");
+                Engine.startGame("4", userName);
                 break;
             case 5:
-                Cli.getUserName();
                 System.out.println("What number is missing in the progression?");
-                Engine.startGame("5");
+                Engine.startGame("5", userName);
                 break;
             case 6:
-                Cli.getUserName();
                 System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-                Engine.startGame("6");
+                Engine.startGame("6", userName);
+                break;
+            default:
                 break;
         }
     }

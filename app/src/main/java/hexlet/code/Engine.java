@@ -1,11 +1,14 @@
 package hexlet.code;
+
+
 import hexlet.code.games.*;
 
 import java.util.Scanner;
 
 public class Engine {
-    public static void startGame(String gameNumber) {
+    public static void startGame(String gameNumber, String userName) {
 
+        int numberOfRounds = 3;
         int quitTheGame = 0;
         while (quitTheGame < 3) {
             String correctAnswer = "";
@@ -24,20 +27,26 @@ public class Engine {
                     break;
                 case "6":
                     correctAnswer = Prime.gamePrime();
+                    break;
+                default:
+                    correctAnswer = null;
             }
+
             Scanner scanner = new Scanner(System.in);
             System.out.print("Your answer: ");
             String userResponse = scanner.next();
+
             if (correctAnswer.equals(userResponse)) {
                 System.out.println("Correct!");
                 quitTheGame += 1;
             } else {
-                System.out.println("'" + userResponse + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.\nLet's try again, " + Cli.userName + "!");
+                System.out.println("'" + userResponse + "' is wrong answer ;(. Correct answer was '" +
+                        correctAnswer + "'.\nLet's try again, " + userName + "!");
                 break;
             }
 
-            if (quitTheGame == 3) {
-                System.out.println("Congratulations, " + Cli.userName + "!");
+            if (quitTheGame == numberOfRounds) {
+                System.out.println("Congratulations, " + userName + "!");
                 break;
             }
         }

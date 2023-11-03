@@ -1,20 +1,18 @@
 package hexlet.code.games;
-import hexlet.code.Engine;
 
 import java.util.Random;
 
 public class Calculator {
     public static String gameCalculator() {
-        //System.out.println("What is the result of the expression?");
-
-        var operator = "-+*";
-
+        String operator = "-+*";
         Random random = new Random();
         char operatorRandom = operator.charAt(random.nextInt(operator.length()));
 
+        int upperlimit = 100;
+        int minimum = 40;
         Random randomNumber = new Random();
-        int randomNumberOne = randomNumber.nextInt(100 - 40 + 1) + 40;
-        int randomNumberTwo = randomNumber.nextInt(100);
+        int randomNumberOne = randomNumber.nextInt(upperlimit - minimum + 1) + minimum;
+        int randomNumberTwo = randomNumber.nextInt(upperlimit);
         String correctAnswer = "";
 
         switch (operatorRandom) {
@@ -30,6 +28,8 @@ public class Calculator {
                 System.out.println("Question: " + randomNumberOne + " * " + randomNumberTwo);
                 correctAnswer = String.valueOf(randomNumberOne * randomNumberTwo);
                 break;
+            default:
+                correctAnswer = null;
         }
     return correctAnswer;
     }

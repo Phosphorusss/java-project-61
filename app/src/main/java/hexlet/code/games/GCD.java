@@ -5,9 +5,10 @@ import java.util.Random;
 public class GCD {
 
     public static String gameGCD() {
+        int upperlimit = 50;
         Random randomNumber = new Random();
-        int randomNumberOne = randomNumber.nextInt(50);
-        int randomNumberTwo = randomNumber.nextInt(50);
+        int randomNumberOne = randomNumber.nextInt(upperlimit);
+        int randomNumberTwo = randomNumber.nextInt(upperlimit);
 
         System.out.println("Question: " + randomNumberOne + " " + randomNumberTwo);
         while (randomNumberTwo != 0) {
