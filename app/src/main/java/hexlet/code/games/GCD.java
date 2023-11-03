@@ -3,12 +3,12 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class GCD {
-
+    static final int UPPER_LIMIT = 100;
     public static String gameGCD() {
-        int upperlimit = 50;
+
         Random randomNumber = new Random();
-        int randomNumberOne = randomNumber.nextInt(upperlimit);
-        int randomNumberTwo = randomNumber.nextInt(upperlimit);
+        int randomNumberOne = randomNumber.nextInt(UPPER_LIMIT);
+        int randomNumberTwo = randomNumber.nextInt(UPPER_LIMIT);
 
         System.out.println("Question: " + randomNumberOne + " " + randomNumberTwo);
         while (randomNumberTwo != 0) {
