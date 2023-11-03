@@ -17,7 +17,6 @@ public class App {
 
         switch (gameNumber) {
             case 1:
-                Cli.getUserName();
                 break;
             case 2:
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
