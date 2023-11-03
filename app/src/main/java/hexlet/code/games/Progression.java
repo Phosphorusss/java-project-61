@@ -18,7 +18,7 @@ public class Progression {
         int correctAnswer = 0;
         var progression = new StringBuilder("");
         progression.append(firstNumberProgression).append(" ");
-        for (var i = 1; i <= 9; i++) {
+        for (var i = 1; i <= END_VALUE_OF_RANGE; i++) {
             if (i == unknownNumber) {
                 firstNumberProgression = firstNumberProgression + difference;
                 correctAnswer = firstNumberProgression;

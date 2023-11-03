@@ -18,7 +18,7 @@ public class App {
             return;
         }
 
-        String userName = Cli.getUserName();;
+        String userName = Cli.getUserName();
 
         switch (gameNumber) {
             case EVEN_GAME:
