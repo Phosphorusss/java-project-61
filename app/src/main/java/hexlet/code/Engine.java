@@ -9,7 +9,7 @@ public class Engine {
         System.out.println(question);
         int quitTheGame = 0;
         while (quitTheGame < NUMBER_OF_ROUNDS) {
-            System.out.println("Question " + correctAnswer[quitTheGame][0]);
+            System.out.println("Question: " + correctAnswer[quitTheGame][0]);
             Scanner scanner = new Scanner(System.in);
             System.out.print("Your answer: ");
             String userResponse = scanner.next();
