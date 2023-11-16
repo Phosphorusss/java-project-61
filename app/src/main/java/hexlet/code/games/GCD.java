@@ -1,21 +1,34 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.Random;
 
 public class GCD {
     static final int UPPER_LIMIT = 100;
-    public static String gameGCD() {
+    static final int NUMBER_OF_ROUNDS = 3;
+    public static void gameGCD() {
+        String[][] arrayCorrectAnswer = new String[3][2];
 
-        Random randomNumber = new Random();
-        int randomNumberOne = randomNumber.nextInt(UPPER_LIMIT);
-        int randomNumberTwo = randomNumber.nextInt(UPPER_LIMIT);
+        int item = 0;
+        while (item < NUMBER_OF_ROUNDS) {
+            Random randomNumber = new Random();
+            int randomNumberOne = randomNumber.nextInt(UPPER_LIMIT);
+            int randomNumberTwo = randomNumber.nextInt(UPPER_LIMIT);
 
-        System.out.println("Question: " + randomNumberOne + " " + randomNumberTwo);
-        while (randomNumberTwo != 0) {
-            int tmp = randomNumberOne % randomNumberTwo;
-            randomNumberOne = randomNumberTwo;
-            randomNumberTwo = tmp;
+            arrayCorrectAnswer[item][0] = randomNumberOne + " " + randomNumberTwo;
+            arrayCorrectAnswer[item][1] = getCorrectAnswer(randomNumberOne, randomNumberTwo);
+            item += 1;
         }
-    return String.valueOf(randomNumberOne);
+        Engine.startGame(arrayCorrectAnswer);
+    }
+
+    public static String getCorrectAnswer(int numberOne, int numberTwo) {
+        while (numberTwo != 0) {
+            int tmp = numberOne % numberTwo;
+            numberOne = numberTwo;
+            numberTwo = tmp;
+        }
+        return String.valueOf(numberOne);
     }
 }

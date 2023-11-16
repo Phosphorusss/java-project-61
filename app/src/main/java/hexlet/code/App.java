@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.games.*;
+
 import java.util.Scanner;
 public class App {
     static final int EVEN_GAME = 2;
@@ -18,31 +20,30 @@ public class App {
             return;
         }
 
-        String userName = Cli.getUserName();
-
         switch (gameNumber) {
             case EVEN_GAME:
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-                Engine.startGame("2", userName);
+                Even.question();
                 break;
             case CALCULATOR_GAME:
                 System.out.println("What is the result of the expression?");
-                Engine.startGame("3", userName);
+                Calculator.gameCalculator();
                 break;
-            case GCD_GAME :
+            case GCD_GAME:
                 System.out.println("Find the greatest common divisor of given numbers.");
-                Engine.startGame("4", userName);
+                GCD.gameGCD();
                 break;
-            case PROGRESSION_GAME :
+            case PROGRESSION_GAME:
                 System.out.println("What number is missing in the progression?");
-                Engine.startGame("5", userName);
+                Progression.gameProgression();
                 break;
             case PRIME_GAME:
                 System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-                Engine.startGame("6", userName);
+                Prime.gamePrime();
                 break;
             default:
                 break;
         }
+
     }
 }
