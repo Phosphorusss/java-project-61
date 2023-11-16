@@ -14,13 +14,13 @@ public class Engine {
             System.out.print("Your answer: ");
             String userResponse = scanner.next();
 
-        var t = correctAnswer[quitTheGame][1];
-        if (t.equals(userResponse)) {
+        String response = correctAnswer[quitTheGame][1];
+        if (response.equals(userResponse)) {
             System.out.println("Correct!");
             quitTheGame += 1;
         } else {
             System.out.println("'" + userResponse + "' is wrong answer ;(. Correct answer was '"
-                    + t + "'.\nLet's try again, " + userName + "!");
+                    + response + "'.\nLet's try again, " + userName + "!");
             break;
         }
 
