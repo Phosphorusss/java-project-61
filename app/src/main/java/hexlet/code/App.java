@@ -1,6 +1,14 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calculator;
+
+import hexlet.code.games.Even;
+
+import hexlet.code.games.GCD;
+
+import hexlet.code.games.Progression;
+
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 public class App {
@@ -29,19 +37,15 @@ public class App {
                 Even.question();
                 break;
             case CALCULATOR_GAME:
-                //System.out.println("What is the result of the expression?");
                 Calculator.gameCalculator();
                 break;
             case GCD_GAME:
-                //System.out.println("Find the greatest common divisor of given numbers.");
                 GCD.gameGCD();
                 break;
             case PROGRESSION_GAME:
-                //System.out.println("What number is missing in the progression?");
                 Progression.gameProgression();
                 break;
             case PRIME_GAME:
-                //System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
                 Prime.gamePrime();
                 break;
             default:

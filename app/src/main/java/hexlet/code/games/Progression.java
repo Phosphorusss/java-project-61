@@ -11,8 +11,9 @@ public class Progression {
     static final int END_VALUE_OF_RANGE = 9;
     static final int STARTING_RANGE_VALUE = 1;
     static final int NUMBER_OF_ROUNDS = 3;
+    static final int ARRAY_LENGTH = 3;
     public static void gameProgression() {
-        String[][] arrayCorrectAnswer = new String[3][2];
+        String[][] arrayCorrectAnswer = new String[ARRAY_LENGTH][2];
 
         int item = 0;
         while (item < NUMBER_OF_ROUNDS) {
@@ -42,7 +43,7 @@ public class Progression {
         Engine.startGame(arrayCorrectAnswer, "What number is missing in the progression?");
     }
 
-    public static int getCorrectAnswer(String strProgression,int difference, int unknownNumber) {
+    public static int getCorrectAnswer(String strProgression, int difference, int unknownNumber) {
         var stringToArray = strProgression.split(" ");
         return Integer.parseInt(stringToArray[unknownNumber - 1]) + difference;
     }

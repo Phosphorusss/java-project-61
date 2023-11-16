@@ -8,8 +8,9 @@ public class Calculator {
     static final int UPPER_LIMIT = 100;
     static final int MINIMUM = 40;
     static final int NUMBER_OF_ROUNDS = 3;
+    static final int ARRAY_LENGTH = 3;
     public static void gameCalculator() {
-        String [][] arrayCorrectAnswer = new String[3][2];
+        String[][] arrayCorrectAnswer = new String[ARRAY_LENGTH][2];
 
         int item = 0;
         while (item < NUMBER_OF_ROUNDS) {
