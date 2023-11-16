@@ -26,7 +26,7 @@ public class Calculator {
 
             item += 1;
         }
-        Engine.startGame(arrayCorrectAnswer);
+        Engine.startGame(arrayCorrectAnswer, "What is the result of the expression?");
     }
 
     public static String getCorrectAnswer(int numberOne, int numberTwo, char operator) {

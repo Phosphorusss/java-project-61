@@ -19,7 +19,7 @@ public class Prime {
             arrayCorrectAnswer[item][1] = getCorrectAnswer(randomNumber);
             item += 1;
         }
-        Engine.startGame(arrayCorrectAnswer);
+        Engine.startGame(arrayCorrectAnswer, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
     }
 
     public static String getCorrectAnswer(int number) {

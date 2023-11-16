@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Engine {
     static final int NUMBER_OF_ROUNDS = 3;
-    public static void startGame(String[][] correctAnswer) {
+    public static void startGame(String[][] correctAnswer, String question) {
         String userName = Cli.getUserName();
-
+        System.out.println(question);
         int quitTheGame = 0;
         while (quitTheGame < NUMBER_OF_ROUNDS) {
             System.out.println("Question " + correctAnswer[quitTheGame][0]);

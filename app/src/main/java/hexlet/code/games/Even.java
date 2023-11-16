@@ -19,7 +19,7 @@ public class Even {
             arrayCorrectAnswer[item][1] = isEven(randomNumber) ? "yes" : "no";
             item += 1;
         }
-        Engine.startGame(arrayCorrectAnswer);
+        Engine.startGame(arrayCorrectAnswer, "Answer 'yes' if the number is even, otherwise answer 'no'.");
     }
 
         public static boolean isEven(int number) {

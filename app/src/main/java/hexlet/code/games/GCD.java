@@ -20,7 +20,7 @@ public class GCD {
             arrayCorrectAnswer[item][1] = getCorrectAnswer(randomNumberOne, randomNumberTwo);
             item += 1;
         }
-        Engine.startGame(arrayCorrectAnswer);
+        Engine.startGame(arrayCorrectAnswer, "Find the greatest common divisor of given numbers.");
     }
 
     public static String getCorrectAnswer(int numberOne, int numberTwo) {

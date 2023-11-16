@@ -26,23 +26,22 @@ public class App {
                 Cli.getUserName();
                 break;
             case EVEN_GAME:
-                System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
                 Even.question();
                 break;
             case CALCULATOR_GAME:
-                System.out.println("What is the result of the expression?");
+                //System.out.println("What is the result of the expression?");
                 Calculator.gameCalculator();
                 break;
             case GCD_GAME:
-                System.out.println("Find the greatest common divisor of given numbers.");
+                //System.out.println("Find the greatest common divisor of given numbers.");
                 GCD.gameGCD();
                 break;
             case PROGRESSION_GAME:
-                System.out.println("What number is missing in the progression?");
+                //System.out.println("What number is missing in the progression?");
                 Progression.gameProgression();
                 break;
             case PRIME_GAME:
-                System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                //System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
                 Prime.gamePrime();
                 break;
             default:

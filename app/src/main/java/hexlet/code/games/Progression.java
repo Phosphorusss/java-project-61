@@ -39,7 +39,7 @@ public class Progression {
             arrayCorrectAnswer[item][1] = String.valueOf(getCorrectAnswer(strProgression, difference, unknownNumber));
             item += 1;
         }
-        Engine.startGame(arrayCorrectAnswer);
+        Engine.startGame(arrayCorrectAnswer, "What number is missing in the progression?");
     }
 
     public static int getCorrectAnswer(String strProgression,int difference, int unknownNumber) {
