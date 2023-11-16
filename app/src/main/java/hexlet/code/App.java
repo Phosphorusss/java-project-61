@@ -4,6 +4,7 @@ import hexlet.code.games.*;
 
 import java.util.Scanner;
 public class App {
+    static final int GREETINGS = 1;
     static final int EVEN_GAME = 2;
     static final int CALCULATOR_GAME = 3;
     static final int GCD_GAME = 4;
@@ -21,6 +22,9 @@ public class App {
         }
 
         switch (gameNumber) {
+            case GREETINGS:
+                Cli.getUserName();
+                break;
             case EVEN_GAME:
                 System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
                 Even.question();
