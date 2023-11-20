@@ -8,6 +8,7 @@ public class Prime {
     static final int UPPER_LIMIT = 100;
     static final int NUMBER_OF_ROUNDS = 3;
     static final int ARRAY_LENGTH = 3;
+
     public static void gamePrime() {
         String[][] arrayCorrectAnswer = new String[ARRAY_LENGTH][2];
 
@@ -17,25 +18,21 @@ public class Prime {
             int randomNumber = random.nextInt(UPPER_LIMIT);
 
             arrayCorrectAnswer[item][0] = String.valueOf(randomNumber);
-            arrayCorrectAnswer[item][1] = getCorrectAnswer(randomNumber);
+            arrayCorrectAnswer[item][1] = getCorrectAnswer(randomNumber) ? "yes" : "no";
             item += 1;
         }
         Engine.startGame(arrayCorrectAnswer, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
     }
 
-    public static String getCorrectAnswer(int number) {
-        String correctAnswer = "no";
+    public static boolean getCorrectAnswer(int number) {
         if (number == 1 || number == 0) {
-            correctAnswer = "no";
+            return false;
         }
         for (var i = 2; i < number; i++) {
             if (number % i == 0) {
-                correctAnswer = "no";
-                break;
-            } else {
-                correctAnswer = "yes";
+                return false;
             }
         }
-    return correctAnswer;
+        return true;
     }
 }

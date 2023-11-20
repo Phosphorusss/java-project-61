@@ -9,6 +9,7 @@ public class Calculator {
     static final int MINIMUM = 40;
     static final int NUMBER_OF_ROUNDS = 3;
     static final int ARRAY_LENGTH = 3;
+
     public static void gameCalculator() {
         String[][] arrayCorrectAnswer = new String[ARRAY_LENGTH][2];
 
@@ -23,28 +24,28 @@ public class Calculator {
             int randomNumberTwo = randomNumber.nextInt(UPPER_LIMIT);
 
             arrayCorrectAnswer[item][0] = randomNumberOne + " " + operatorRandom + " " + randomNumberTwo;
-            arrayCorrectAnswer[item][1] = getCorrectAnswer(randomNumberOne, randomNumberTwo, operatorRandom);
+            arrayCorrectAnswer[item][1] = String.valueOf(getCorrectAnswer(randomNumberOne, randomNumberTwo, operatorRandom));
 
             item += 1;
         }
         Engine.startGame(arrayCorrectAnswer, "What is the result of the expression?");
     }
 
-    public static String getCorrectAnswer(int numberOne, int numberTwo, char operator) {
-        String correctAnswer = "";
+    public static int getCorrectAnswer(int numberOne, int numberTwo, char operator) {
+        int correctAnswer = 0;
         switch (operator) {
             case '-':
-                correctAnswer = String.valueOf(numberOne - numberTwo);
+                correctAnswer = numberOne - numberTwo;
                 break;
             case '+':
-                correctAnswer = String.valueOf(numberOne + numberTwo);
+                correctAnswer = numberOne + numberTwo;
                 break;
             case '*':
-                correctAnswer = String.valueOf(numberOne * numberTwo);
+                correctAnswer = numberOne * numberTwo;
                 break;
             default:
                 break;
-            }
-    return correctAnswer;
+        }
+        return correctAnswer;
     }
 }

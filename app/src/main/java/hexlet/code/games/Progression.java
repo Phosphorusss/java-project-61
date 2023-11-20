@@ -12,6 +12,7 @@ public class Progression {
     static final int STARTING_RANGE_VALUE = 1;
     static final int NUMBER_OF_ROUNDS = 3;
     static final int ARRAY_LENGTH = 3;
+
     public static void gameProgression() {
         String[][] arrayCorrectAnswer = new String[ARRAY_LENGTH][2];
 
@@ -23,28 +24,23 @@ public class Progression {
             int difference = STARTING_RANGE_VALUE + (int) (Math.random() * END_VALUE_OF_RANGE);
             int unknownNumber = STARTING_RANGE_VALUE + (int) (Math.random() * END_VALUE_OF_RANGE);
 
-            var progression = new StringBuilder("");
-            progression.append(firstNumberProgression).append(" ");
-            for (var i = 1; i <= END_VALUE_OF_RANGE; i++) {
-                if (i == unknownNumber) {
-                    firstNumberProgression = firstNumberProgression + difference;
-                    progression.append("..").append(" ");
-                    continue;
-                }
-                firstNumberProgression = firstNumberProgression + difference;
-                progression.append(firstNumberProgression).append(" ");
-            }
-            String strProgression = progression.toString();
-
-            arrayCorrectAnswer[item][0] = strProgression;
-            arrayCorrectAnswer[item][1] = String.valueOf(getCorrectAnswer(strProgression, difference, unknownNumber));
+            String progression = progressionGenerator(firstNumberProgression, difference);
+            var stringToArray = progression.split(" ");
+            arrayCorrectAnswer[item][1] = stringToArray[unknownNumber];
+            stringToArray[unknownNumber] = "..";
+            arrayCorrectAnswer[item][0] = String.join(" ", stringToArray);
             item += 1;
         }
         Engine.startGame(arrayCorrectAnswer, "What number is missing in the progression?");
     }
 
-    public static int getCorrectAnswer(String strProgression, int difference, int unknownNumber) {
-        var stringToArray = strProgression.split(" ");
-        return Integer.parseInt(stringToArray[unknownNumber - 1]) + difference;
+    public static String progressionGenerator(int firstNumberProgression, int difference) {
+        var progression = new StringBuilder("");
+        progression.append(firstNumberProgression).append(" ");
+        for (var i = 1; i <= END_VALUE_OF_RANGE; i++) {
+            firstNumberProgression = firstNumberProgression + difference;
+            progression.append(firstNumberProgression).append(" ");
+        }
+        return progression.toString();
     }
 }

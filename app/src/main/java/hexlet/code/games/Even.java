@@ -3,6 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 import java.util.Random;
+
 public class Even {
     static final int UPPER_LIMIT = 100;
     static final int NUMBER_OF_ROUNDS = 3;
@@ -23,9 +24,7 @@ public class Even {
         Engine.startGame(arrayCorrectAnswer, "Answer 'yes' if the number is even, otherwise answer 'no'.");
     }
 
-        public static boolean isEven(int number) {
+    public static boolean isEven(int number) {
         return number % 2 == 0;
     }
 }
-
-

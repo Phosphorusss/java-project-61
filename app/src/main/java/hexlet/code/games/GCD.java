@@ -18,18 +18,18 @@ public class GCD {
             int randomNumberTwo = randomNumber.nextInt(UPPER_LIMIT);
 
             arrayCorrectAnswer[item][0] = randomNumberOne + " " + randomNumberTwo;
-            arrayCorrectAnswer[item][1] = getCorrectAnswer(randomNumberOne, randomNumberTwo);
+            arrayCorrectAnswer[item][1] = String.valueOf(getCorrectAnswer(randomNumberOne, randomNumberTwo));
             item += 1;
         }
         Engine.startGame(arrayCorrectAnswer, "Find the greatest common divisor of given numbers.");
     }
 
-    public static String getCorrectAnswer(int numberOne, int numberTwo) {
+    public static int getCorrectAnswer(int numberOne, int numberTwo) {
         while (numberTwo != 0) {
             int tmp = numberOne % numberTwo;
             numberOne = numberTwo;
             numberTwo = tmp;
         }
-        return String.valueOf(numberOne);
+        return numberOne;
     }
 }
