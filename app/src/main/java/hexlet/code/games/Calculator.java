@@ -24,7 +24,8 @@ public class Calculator {
             int randomNumberTwo = randomNumber.nextInt(UPPER_LIMIT);
 
             arrayCorrectAnswer[item][0] = randomNumberOne + " " + operatorRandom + " " + randomNumberTwo;
-            arrayCorrectAnswer[item][1] = String.valueOf(getCorrectAnswer(randomNumberOne, randomNumberTwo, operatorRandom));
+            arrayCorrectAnswer[item][1] = String.valueOf(getCorrectAnswer(randomNumberOne,
+                    randomNumberTwo, operatorRandom));
 
             item += 1;
         }
