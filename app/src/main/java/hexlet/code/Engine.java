@@ -6,9 +6,7 @@ public class Engine {
     static final int NUMBER_OF_ROUNDS = 3;
 
     public static void startGame(String[][] questionsAndAnswers, String question) {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-
+        System.out.print("Welcome to the Brain Games!\nMay I have your name? ");
         Scanner scannerUser = new Scanner(System.in);
         String userName = scannerUser.next();
         System.out.println("Hello, " + userName + "!");
@@ -18,6 +16,7 @@ public class Engine {
         while (quitTheGame < NUMBER_OF_ROUNDS) {
             System.out.println("Question: " + questionsAndAnswers[quitTheGame][0]);
             Scanner scannerAnswer = new Scanner(System.in);
+
             System.out.print("Your answer: ");
             String userResponse = scannerAnswer.next();
             String response = questionsAndAnswers[quitTheGame][1];

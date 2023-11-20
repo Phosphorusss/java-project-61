@@ -27,16 +27,12 @@ public class App {
         System.out.print("Your choice: ");
         int gameNumber = scanner.nextInt();
 
-        if (gameNumber == 0) {
-            return;
-        }
-
         switch (gameNumber) {
             case GREETINGS:
                 Cli.greetings();
                 break;
             case EVEN_GAME:
-                Even.question();
+                Even.gameEven();
                 break;
             case CALCULATOR_GAME:
                 Calculator.gameCalculator();

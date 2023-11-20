@@ -9,7 +9,7 @@ public class Even {
     static final int NUMBER_OF_ROUNDS = 3;
     static final int ARRAY_LENGTH = 3;
 
-    public static void question() {
+    public static void gameEven() {
         String[][] arrayCorrectAnswer = new String[ARRAY_LENGTH][2];
 
         int item = 0;
