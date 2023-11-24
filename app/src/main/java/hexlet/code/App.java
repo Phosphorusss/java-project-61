@@ -13,12 +13,12 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
-    static final int GREETINGS = 1;
-    static final int EVEN_GAME = 2;
-    static final int CALCULATOR_GAME = 3;
-    static final int GCD_GAME = 4;
-    static final int PROGRESSION_GAME = 5;
-    static final int PRIME_GAME = 6;
+    private static final int GREETINGS = 1;
+    private static final int EVEN_GAME = 2;
+    private static final int CALCULATOR_GAME = 3;
+    private static final int GCD_GAME = 4;
+    private static final int PROGRESSION_GAME = 5;
+    private static final int PRIME_GAME = 6;
 
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.\n1 - Greet"
@@ -47,7 +47,7 @@ public class App {
                 Prime.gamePrime();
                 break;
             default:
-                break;
+                throw new Error("you must specify the game number. From 0 to 6");
         }
 
     }

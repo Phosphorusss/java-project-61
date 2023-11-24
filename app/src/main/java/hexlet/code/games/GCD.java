@@ -1,27 +1,28 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
-import java.util.Random;
 
 public class GCD {
-    static final int UPPER_LIMIT = 100;
-    static final int NUMBER_OF_ROUNDS = 3;
-    static final int ARRAY_LENGTH = 3;
+    private static final int LOWER_LIMIT = 1;
+    private static final int UPPER_LIMIT = 100;
+    private static final int NUMBER_OF_ROUNDS = 3;
+    private static final int ARRAY_LENGTH = 3;
+
     public static void gameGCD() {
-        String[][] arrayCorrectAnswer = new String[ARRAY_LENGTH][2];
+        String[][] questionsAndAnswers = new String[ARRAY_LENGTH][2];
 
         int item = 0;
         while (item < NUMBER_OF_ROUNDS) {
-            Random randomNumber = new Random();
-            int randomNumberOne = randomNumber.nextInt(UPPER_LIMIT);
-            int randomNumberTwo = randomNumber.nextInt(UPPER_LIMIT);
+            int randomNumberOne = Utils.getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
+            int randomNumberTwo = Utils.getRandomInt(LOWER_LIMIT, UPPER_LIMIT);
 
-            arrayCorrectAnswer[item][0] = randomNumberOne + " " + randomNumberTwo;
-            arrayCorrectAnswer[item][1] = String.valueOf(getCorrectAnswer(randomNumberOne, randomNumberTwo));
+            questionsAndAnswers[item][0] = randomNumberOne + " " + randomNumberTwo;
+            questionsAndAnswers[item][1] = String.valueOf(getCorrectAnswer(randomNumberOne, randomNumberTwo));
             item += 1;
         }
-        Engine.startGame(arrayCorrectAnswer, "Find the greatest common divisor of given numbers.");
+        Engine.startGame(questionsAndAnswers, "Find the greatest common divisor of given numbers.");
     }
 
     public static int getCorrectAnswer(int numberOne, int numberTwo) {
